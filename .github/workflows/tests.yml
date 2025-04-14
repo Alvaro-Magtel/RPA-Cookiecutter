@@ -83,6 +83,7 @@ jobs:
             ${{ steps.pre-commit-cache.outputs.result }}-
 
       - name: Run Nox
+        shell: bash
         run: |
           uv run nox --python=${{ matrix.python }}  --session=$NOXSESSION
 
