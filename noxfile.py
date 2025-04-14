@@ -203,7 +203,7 @@ def coverage(session: nox.Session) -> None:
         external=True,
     )
     if not session.posargs and any(Path().glob(".coverage.*")):
-        session.run("coverage", "combine")
+        session.run("coverage", "combine", "--keep-paths")
 
     session.run("coverage", *args)
 
