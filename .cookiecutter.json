@@ -1,0 +1,16 @@
+{
+  "_checkout": null,
+  "_output_dir": "C:\\Users\\PRCAAL\\PROYECTOS",
+  "_repo_dir": "C:\\Users\\PRCAAL\\.cookiecutters\\cookiecutter-uv-hypermodern-python",
+  "_template": "gh:bosd/cookiecutter-uv-hypermodern-python",
+  "author": "Alvaro Prieto Cano",
+  "copyright_year": "2025",
+  "development_status": "Development Status :: 3 - Alpha",
+  "email": "alvaro.prieto@magtel.es",
+  "friendly_name": "RPA AS",
+  "github_user": "Alvaro-Magtel",
+  "license": "MIT",
+  "package_name": "rpa_automation_suite",
+  "project_name": "RPA-Cookiecutter",
+  "version": "0.1.0"
+}
