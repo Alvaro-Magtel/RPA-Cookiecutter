@@ -12,7 +12,6 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
 [![Ruff codestyle][ruff badge]][ruff project]
 
-
 [pypi status]: https://pypi.org/project/RPA-Cookiecutter/
 [read the docs]: https://RPA-Cookiecutter.readthedocs.io/
 [tests]: https://github.com/Alvaro-Magtel/RPA-Cookiecutter/actions?workflow=Tests
