@@ -129,6 +129,7 @@ jobs:
           merge-multiple: true
 
       - name: Combine coverage data and display human readable report
+        working-directory: ${{ github.workspace }}
         run: |
           uvx nox --session=coverage
 

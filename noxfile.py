@@ -202,10 +202,13 @@ def coverage(session: nox.Session) -> None:
         env={"UV_PROJECT_ENVIRONMENT": session.virtualenv.location},
         external=True,
     )
+
     if not session.posargs and any(Path().glob(".coverage.*")):
         session.run("coverage", "combine")
 
-    session.run("coverage", *args)
+    # Set the source directory explicitly
+    session.env["COVERAGE_FILE"] = str(Path().absolute() / ".coverage")
+    session.run("coverage", *args, "--include=src/*")
 
 
 @nox.session(python=python_versions[0])
