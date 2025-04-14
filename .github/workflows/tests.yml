@@ -84,7 +84,7 @@ jobs:
 
       - name: Run Nox
         run: |
-          uv run nox --python=${{ matrix.python }}
+          uv run nox --python=${{ matrix.python }}  --session=$NOXSESSION
 
       - name: Upload coverage data
         if: always() && matrix.session == 'tests'
