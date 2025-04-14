@@ -55,6 +55,9 @@ jobs:
       - name: Install dependencies
         run: uv pip sync requirements.txt
 
+      - name: Install nox
+        run: uv pip install nox
+
       - name: Compute pre-commit cache key
         if: matrix.session == 'pre-commit'
         id: pre-commit-cache
