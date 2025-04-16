@@ -109,7 +109,9 @@ def precommit(session: nox.Session) -> None:
         "--hook-stage=manual",
         "--show-diff-on-failure",
     ]
-    session.run("uv", "sync", "--group", "dev", "--group", "lint", external=True)
+    session.run(
+        "uv", "sync", "--group", "dev", "--group", "lint", external=True
+    )
     session.run("pre-commit", *args)
     if args and args[0] == "install":
         activate_virtualenv_in_precommit_hooks(session)
@@ -157,7 +159,9 @@ def mypy(session: nox.Session) -> None:
     )
     session.run("mypy", *args)
     if not session.posargs:
-        session.run("mypy", f"--python-executable={sys.executable}", "noxfile.py")
+        session.run(
+            "mypy", f"--python-executable={sys.executable}", "noxfile.py"
+        )
 
 
 @nox.session(python=python_versions)
@@ -277,7 +281,10 @@ def docs_build(session: nox.Session) -> None:
 
 @nox.session(python=python_versions[0])
 def docs(session: nox.Session) -> None:
-    """Build and serve the documentation with live reloading on file changes."""
+    """Build and serve the documentation.
+
+    Live reloading is triggered on file changes.
+    """
     args = session.posargs or ["--open-browser", "docs", "docs/_build"]
     session.run(
         "uv",

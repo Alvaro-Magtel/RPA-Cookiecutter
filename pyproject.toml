@@ -90,8 +90,10 @@ show_error_context = true
 
 [tool.ruff]
 src = ["src", "tests"]
+line-length = 79
 
 [tool.ruff.lint]
+
 select = [
   "B",    # flake8-bugbear
   "C90",  # mccabe
